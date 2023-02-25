@@ -19,14 +19,7 @@ const productSchema=new mongoose.Schema({
     },
     images:[
         {
-            public_id:{
-                type:String,
-                required:true
-            },
-            url:{
-                type:String,
-                required:true
-            },
+        type:Array
         }
     ],
     category:{
@@ -42,7 +35,8 @@ const productSchema=new mongoose.Schema({
                     'Books',
                     'Sports',
                     'Clothes',
-                    'Beauty/Health'
+                    'Beauty',
+                    'Health'
                 ],
                 message:'Please select category for product'
             }
@@ -70,7 +64,7 @@ const productSchema=new mongoose.Schema({
                 type:Number,
                 required:true
             },
-            Comment:{
+            comment:{
                 type:String,
                 required:true
             }
